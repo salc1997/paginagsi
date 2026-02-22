@@ -9,16 +9,19 @@
 </head>
 <body>
 
-    <nav class="navbar">
-        <img src="logo.png" class="imagen-ajustada" alt="">
-        <ul class="nav-links">
-            <li><a href="#">Funciones</a></li>
-            <li><a href="#">Plantillas</a></li>
-            <li><a href="#">Precios</a></li>
-        </ul>
-        <a class="btn-primary" onclick="abrirContacto()">Comienza ahora</a>
-    </nav>
+<nav class="navbar">
+    <div class="logo">Soluciones Integrales</div>
+    
+    <button class="menu-toggle" onclick="toggleMenu()">
+        &#9776; </button>
 
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Quiénes Somos</a></li>
+        <li><button class="btn-primary" onclick="abrirContacto()">Comienza ahora</button></li>
+    </ul>
+</nav>
     <header class="hero">
         <h1>Grupo Soluciones Integrales
         </h1>
