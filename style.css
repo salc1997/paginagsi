@@ -191,3 +191,12 @@ body {
     }
 }
 
+img {
+    max-width: 100%; /* La imagen nunca será más ancha que su contenedor */
+    height: auto;
+}
+
+section {
+    padding: 50px 5%; /* El 5% de margen lateral se ajusta solo en cualquier pantalla */
+}
+
