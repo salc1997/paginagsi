@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creador de Páginas Web - Estilo Canva</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <nav class="navbar">
+        <img src="logo.png" class="imagen-ajustada" alt="">
+        <ul class="nav-links">
+            <li><a href="#">Funciones</a></li>
+            <li><a href="#">Plantillas</a></li>
+            <li><a href="#">Precios</a></li>
+        </ul>
+        <a class="btn-primary" onclick="abrirContacto()">Comienza ahora</a>
+    </nav>
+
+    <header class="hero">
+        <h1>Grupo Soluciones Integrales
+        </h1>
+        <h2><span class="gradient-text">Innovando el presente, integrando el futuro</span></h2>
+        <br>
+        <!-- <div  class="hero-btns">
+            <button class="btn-large">Crear mi sitio gratis</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/800x450" alt="Vista previa editor">
+        </div> -->
+    </header>
+
+    <section class="features">
+        <div class="grid">
+            <div class="card">
+                <h3 class="card-title">Quiénes Somos</h3>
+                <p>En Grupo Soluciones Integrales, somos un equipo de consultores 
+                    dedicados a transformar desafíos complejos en oportunidades de 
+                    crecimiento. Nos especializamos en brindar acompañamiento 
+                    estratégico y soluciones a medida que optimizan la operatividad y
+                    rentabilidad de nuestros clientes. Nuestra misión es ser el 
+                    aliado estratégico que impulse el éxito sostenible de su 
+                    empresa a través de la excelencia y la integridad.</p>
+            </div>
+            <div class="card">
+                <h3>Diseño Responsivo</h3>
+                <p>Tu web se verá perfecta en computadoras y móviles.</p>
+            </div>
+            <div class="card">
+                <h3>Dominio Personalizado</h3>
+                <p>Conecta tu propia marca con un solo clic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="contacto" style="padding: 50px 5%; text-align: center;">
+    <h2>Contáctanos</h2>
+    <p>¿Listo para llevar su empresa al siguiente nivel?</p>
+    
+    <form action="https://formspree.io/f/xbdaznqg" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+        <label>Su correo electrónico:</label>
+        <input type="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0;">
+        
+        <label>Mensaje:</label>
+        <textarea name="message" required style="width: 100%; padding: 10px; margin: 10px 0; height: 100px;"></textarea>
+        
+        <button type="submit" class="btn-primary" style="width: 100%; padding: 12px;">Enviar Mensaje</button>
+    </form>
+</section> -->
+
+
+<div id="modalContacto" class="modal-overlay">
+    <div class="modal-content-box">
+        <span class="close-btn" onclick="cerrarContacto()">&times;</span>
+        
+        <section id="contacto" style="padding: 20px; text-align: center;">
+            <h2 style="color: #333;">Contáctanos</h2>
+            <p style="color: #666;">¿Listo para llevar su empresa al siguiente nivel?</p>
+            
+            <form action="https://formspree.io/f/xbdaznqg" method="POST" style="max-width: 500px; margin: 0 auto; text-align: left;">
+                <label style="font-weight: bold;">Su correo electrónico:</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px;">
+                
+                <label style="font-weight: bold;">Mensaje:</label>
+                <textarea name="message" required style="width: 100%; padding: 10px; margin: 10px 0; height: 100px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+                
+                <button type="submit" class="btn-primary" style="width: 100%; padding: 12px; cursor: pointer;">Enviar Mensaje</button>
+            </form>
+        </section>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

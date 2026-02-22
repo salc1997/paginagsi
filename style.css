@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #287AFF; /* Morado estilo Canva */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Botones */
+.btn-primary, .btn-large {
+    background: #287AFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-large {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-primary:hover, .btn-large:hover {
+    background: #7326e0;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(to bottom, #f9f9ff, #fff);
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00c4cc, #8b3dff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    margin-top: 50px;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Grid de Características */
+.features {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    padding: 30px;
+    border: 1px solid #eee;
+    text-align: justify;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.card-title {
+    padding: 30px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* El fondo oscuro */
+.modal-overlay {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Oscurece el fondo */
+    z-index: 1000;
+    backdrop-filter: blur(5px); /* Efecto elegante de desenfoque */
+}
+
+/* La caja blanca del formulario */
+.modal-content-box {
+    background: white;
+    width: 90%;
+    max-width: 550px;
+    margin: 5% auto;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: aparecer 0.3s ease-out;
+}
+
+/* Botón X para cerrar */
+.close-btn {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #888;
+}
+
+.close-btn:hover { color: #000; }
+
+/* Animación de entrada */
+@keyframes aparecer {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.imagen-ajustada {
+    width: 150px;  /* El ancho que tú quieras (puedes usar px o %) */
+    height: 35px;  /* ¡IMPORTANTE! Esto mantiene la proporción y evita que se vea "estirada" */
+    border-radius: 10px; /* Un toque extra para que se vea moderna */
+}
+
