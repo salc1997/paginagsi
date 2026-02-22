@@ -247,3 +247,27 @@ section {
     }
 }
 
+/* --- CONFIGURACIÓN POR DEFECTO (Escritorio) --- */
+.logo-img {
+    height: 50px;    /* Ajusta el tamaño de tu logo aquí */
+    display: block;  /* Se muestra en PC */
+}
+
+.logo-text {
+    display: none;   /* Se oculta en PC */
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+/* --- AJUSTES PARA MÓVIL (Pantallas pequeñas) --- */
+@media (max-width: 768px) {
+    .logo-img {
+        display: none;   /* Escondemos la imagen en el celular */
+    }
+
+    .logo-text {
+        display: block;  /* Mostramos el texto en el celular */
+    }
+}
+
