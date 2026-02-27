@@ -1,4 +1,4 @@
-/* 1. RESET Y BASES */
+/* Inicio */
 * {
     margin: 0;
     padding: 0;
@@ -204,4 +204,104 @@ body {
     .nav-links.active {
         display: flex;
     }
+}
+
+
+
+/* Menu dropdown */
+
+/* --- CONFIGURACIÓN DEL DROPDOWN (PC) --- */
+/* --- 1. CONFIGURACIÓN BASE DROPDOWN (PC) --- */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 260px;
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 8px;
+    padding: 10px 0;
+    list-style: none;
+    border-top: 3px solid #287AFF;
+    top: 100%;
+    left: 0;
+    /* Animación suave para PC */
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* --- 2. ACTIVAR HOVER SOLO EN ESCRITORIO --- */
+@media (min-width: 769px) {
+    .dropdown:hover .dropdown-content {
+        display: block; /* IMPORTANTE: Esto lo hace visible */
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enlaces dentro del dropdown */
+.dropdown-content li a {
+    color: #334155;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.dropdown-content li a:hover {
+    background-color: #f1f5f9;
+    color: #287AFF;
+    padding-left: 25px;
+}
+
+/* --- 3. RESPONSIVE (MÓVIL) - LIMPIO --- */
+@media (max-width: 768px) {
+    /* Quitamos el hover en móvil para evitar bugs */
+    .dropdown:hover .dropdown-content {
+        display: none;
+    }
+
+    .dropdown-content {
+        position: static; /* Empuja el contenido hacia abajo */
+        display: none;    /* Se controla solo con la clase active-mobile */
+        width: 100%;
+        box-shadow: none;
+        background-color: #f8fafc;
+        padding-left: 15px;
+        border-top: none;
+        opacity: 1;      /* Sin transparencia en móvil */
+        transform: none; /* Sin traslación en móvil */
+    }
+
+    /* Esta es la ÚNICA regla que debe mostrar el menú en móvil */
+    .dropdown.active-mobile .dropdown-content {
+        display: block;
+        animation: slideDown 0.3s ease-out;
+    }
+
+    /* Rotación de flecha en móvil */
+    .dropdown.active-mobile .dropbtn i {
+        transform: rotate(180deg);
+    }
+}
+
+/* Animación para móvil */
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
