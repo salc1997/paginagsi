@@ -1,74 +1,401 @@
 <!DOCTYPE html>
-<html lang="es"> 
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creador de Páginas Web - Estilo Canva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Soluciones Integrales" class="logo-img">
 
-<nav class="navbar">
-    <div class="logo">
-        <img src="logo.png" alt="Logo Soluciones Integrales" class="logo-img">
-        
-        <span class="logo-text">Grupo Soluciones Integrales</span>
-    </div>
-    
-    <button class="menu-toggle" onclick="toggleMenu()">
-        &#9776; 
-    </button>
+            <span class="logo-text">Grupo Soluciones Integrales</span>
+        </div>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#">Inicio</a></li>
-    <li class="dropdown">
-        <a href="servicios.html" class="dropbtn">Servicios <i class="fas fa-chevron-down"></i></a>
-        <ul class="dropdown-content">
-            <li><a href="servicios.html#optimizacion">Optimización de Procesos</a></li>
-            <li><a href="servicios.html#qa">Aseguramiento de Calidad (QA)</a></li>
-            <li><a href="servicios.html#digital">Transformación Digital</a></li>
-            <li><a href="servicios.html#iso">Implementación ISO 9001</a></li>
+        <button class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#">Inicio</a></li>
+            <li class="dropdown">
+                <a href="servicios.html" class="dropbtn">Servicios <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="servicios.html#optimizacion">Optimización de Procesos</a></li>
+                    <li><a href="servicios.html#qa">Aseguramiento de Calidad (QA)</a></li>
+                    <li><a href="servicios.html#digital">Transformación Digital</a></li>
+                    <li><a href="servicios.html#iso">Implementación ISO 9001</a></li>
+                </ul>
+            </li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <button type="button" class="btn btn-primary shadow-sm" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">
+                Comienza ahora
+            </button>
         </ul>
-    </li>
-        <li><a href="#">Quiénes Somos</a></li>
-        <li><button class="btn-primary" onclick="abrirContacto()">Comienza ahora</button></li>
-    </ul>
-</nav>
+    </nav>
 
     <header class="hero">
         <h1>Grupo Soluciones Integrales</h1>
         <h2><span class="gradient-text">Innovando el presente, integrando el futuro</span></h2>
     </header>
 
-    <section class="features">
-        <div class="grid">
-            <div class="card">
-                <h3 class="card-title">Quiénes Somos</h3>
-                <p>En Grupo Soluciones Integrales, somos un equipo de consultores 
-                    dedicados a transformar desafíos complejos en oportunidades de 
-                    crecimiento. Nos especializamos en brindar acompañamiento 
-                    estratégico y soluciones a medida que optimizan la operatividad y
-                    rentabilidad de nuestros clientes. Nuestra misión es ser el 
-                    aliado estratégico que impulse el éxito sostenible de su 
-                    empresa a través de la excelencia y la integridad.</p>
+    <!-- Carrusel -->
+    <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="carrusel.jpg" class="d-block w-100" alt="..." class=".carousel-item">
             </div>
-            <div class="card">
-                <h3 class="card-title">Misión</h3>
-                <p>Impulsar la transformación digital de nuestros clientes mediante soluciones 
-                integrales que optimizan sus procesos, reducen costos operativos y potencian su capacidad 
-                competitiva en un mercado globalizado</p>
+            <div class="carousel-item">
+                <img src="iso.jpg" class="d-block w-100" alt="..." class=".carousel-item">
             </div>
-            <div class="card">
-                <h3 class="card-title">Visión</h3>
-                <p>Ser el referente tecnológico y estratégico para las empresas de la región, convirtiéndonos 
-                en el socio clave que garantiza que la innovación y la eficiencia sean los motores de su crecimiento.</p>
+            <div class="carousel-item">
+                <img src="QA.jpeg" class="d-block w-100" alt="..." class=".carousel-item">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Quienes somos -->
+    <section id="quienes-somos" class="features pt-2 pt-md-5">
+        <!-- <h3 class="card-title">Quiénes Somos</h3>
+        <p>En Grupo Soluciones Integrales, somos un equipo de consultores
+            dedicados a transformar desafíos complejos en oportunidades de
+            crecimiento. Nos especializamos en brindar acompañamiento
+            estratégico y soluciones a medida que optimizan la operatividad y
+            rentabilidad de nuestros clientes. Nuestra misión es ser el
+            aliado estratégico que impulse el éxito sostenible de su
+            empresa a través de la excelencia y la integridad.</p> -->
+        <section id="quienes-somos" class="py-5 bg-white">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="display-5 fw-bold text-dark mb-3">Nuestra Identidad</h2>
+                    <div class="mx-auto"
+                        style="width: 80px; height: 4px; background-color: var(--bs-primary); border-radius: 2px;">
+                    </div>
+                </div>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-lift">
+                            <div class="text-primary mb-3 text-center">
+                                <i class="bi bi-briefcase-fill fs-1"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">¿Quiénes Somos?</h3>
+                            <p class="text-muted text-justify fs-5">
+                                Somos un equipo élite de consultores dedicados a transformar desafíos complejos en
+                                oportunidades de alto rendimiento. En <strong>GSI</strong>, brindamos acompañamiento
+                                estratégico y soluciones a medida que optimizan la rentabilidad y el éxito sostenible de
+                                su empresa.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-lift">
+                            <div class="text-primary mb-3 text-center">
+                                <i class="bi bi-rocket-takeoff-fill fs-1"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">Nuestra Misión</h3>
+                            <p class="text-muted text-justify fs-5">
+                                Impulsar la evolución tecnológica de nuestros clientes mediante soluciones integrales.
+                                Optimizamos sus procesos y reducimos costos operativos para garantizar una ventaja
+                                competitiva en el mercado global actual.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-10">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-lift">
+                            <div class="text-primary mb-3 text-center">
+                                <i class="bi bi-eye-fill fs-1"></i>
+                            </div>
+                            <h3 class="h4 fw-bold text-center mb-3">Nuestra Visión</h3>
+                            <p class="text-muted text-justify fs-5">
+                                Consolidarnos como el referente estratégico clave para las empresas de la región,
+                                logrando que la innovación y la eficiencia operativa sean los motores principales de su
+                                crecimiento a largo plazo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section id="por-que-gsi" class="py-5 bg-dark text-white">
+        <div class="container py-4">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">¿Por qué elegir a GSI?</h2>
+                    <p class="fs-5 mb-4 text-light opacity-75">
+                        No somos solo consultores; somos arquitectos de eficiencia. Nuestra metodología combina la
+                        precisión técnica con una visión estratégica orientada a resultados tangibles.
+                    </p>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-patch-check-fill text-primary fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="fw-bold">Excelencia Operativa</h4>
+                            <p class="opacity-75">Implementamos soluciones basadas en estándares internacionales (ISO)
+                                para garantizar que cada proceso sume valor a su rentabilidad.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-cpu-fill text-primary fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="fw-bold">Tecnología de Vanguardia</h4>
+                            <p class="opacity-75">Integramos herramientas digitales de última generación que automatizan
+                                su flujo de trabajo y eliminan cuellos de botella.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-0">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-shield-lock-fill text-primary fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="fw-bold">Integridad y Compromiso</h4>
+                            <p class="opacity-75">Su éxito es nuestra métrica de desempeño. Mantenemos una ética
+                                inquebrantable y un acompañamiento constante en cada fase del proyecto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <div class="position-relative">
+                        <div class="bg-primary rounded-4 p-5 shadow-lg">
+                            <h3 class="display-3 fw-bold">+100%</h3>
+                            <p class="fs-4">Eficiencia Optimizada</p>
+                            <hr class="my-4">
+                            <h3 class="display-3 fw-bold">100%</h3>
+                            <p class="fs-4">Cumplimiento Normativo</p>
+                            <p class="mt-4 small italic">"Transformamos su potencial en resultados medibles."</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
 
+    <section id="por-que-gsi" class="py-5 bg-dark text-white">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="display-5 fw-bold mb-4">Alcance Global, <span class="text-primary">Precisión Local</span>
+                    </h2>
+                    <p class="fs-5 mb-4 text-light opacity-75">
+                        Nuestra trayectoria trasciende fronteras. Hemos optimizado operaciones para empresas en
+                        <strong>Estados Unidos y Brasil</strong>, adaptando estándares internacionales a las necesidades
+                        específicas de cada mercado.
+                    </p>
 
-<script src="script.js"></script>
+                    <div class="d-flex mb-4">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-globe-americas text-primary fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="fw-bold">Experiencia Multi-Mercado</h4>
+                            <p class="opacity-75">Capacidad probada en la gestión de proyectos bajo normativas
+                                norteamericanas y del mercado sudamericano, garantizando una visión global de
+                                eficiencia.</p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex mb-0">
+                        <div class="flex-shrink-0">
+                            <i class="bi bi-translate text-primary fs-3"></i>
+                        </div>
+                        <div class="ms-3">
+                            <h4 class="fw-bold">Estándares Internacionales</h4>
+                            <p class="opacity-75">Dominio de metodologías ágiles y marcos de trabajo globales que
+                                aseguran una comunicación fluida y resultados de clase mundial.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div
+                        class="p-5 border border-primary border-2 rounded-4 text-center bg-black bg-opacity-25 shadow-sm">
+                        <h3 class="h2 fw-bold mb-4 text-white">Nuestra Huella <span class="text-primary">Global</span>
+                        </h3>
+
+                        <div class="d-flex justify-content-center align-items-center gap-4 gap-md-5 mt-4 flex-wrap">
+
+                            <div class="flag-container text-center">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/us.svg"
+                                    alt="Bandera de Estados Unidos - Experiencia GSI"
+                                    class="img-fluid rounded shadow-sm"
+                                    style="width: 80px; height: auto; border: 2px solid rgba(255,255,255,0.1);">
+                                <p class="mt-2 small fw-bold text-white-50">USA</p>
+                            </div>
+
+                            <div class="flag-container text-center">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/br.svg"
+                                    alt="Bandera de Brasil - Experiencia GSI" class="img-fluid rounded shadow-sm"
+                                    style="width: 80px; height: auto; border: 2px solid rgba(255,255,255,0.1);">
+                                <p class="mt-2 small fw-bold text-white-50">Brasil</p>
+                            </div>
+
+                            <div class="flag-container text-center">
+                                <img src="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.6.6/flags/4x3/hn.svg"
+                                    alt="Bandera de Honduras - Sede GSI" class="img-fluid rounded shadow-sm"
+                                    style="width: 80px; height: auto; border: 2px solid rgba(255,255,255,0.1);">
+                                <p class="mt-2 small fw-bold text-white-50">Honduras</p>
+                            </div>
+
+                        </div>
+
+                        <p class="mt-4 small fst-italic" style="color: white !important; opacity: 0.8;">
+                            "Procesos validados en mercados de alta exigencia."
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <section id="qa-desarrollo" class="py-5 bg-light">
+        <div class="container">
+
+            <section id="servicios-tech" class="py-5 bg-light">
+                <div class="container py-4">
+                    <div class="text-center mb-5">
+                        <h2 class="display-5 fw-bold text-dark">Soluciones de Ingeniería & <span class="text-primary">
+                                Calidad</span></h2>
+                        <p class="fs-5 text-muted mx-auto" style="max-width: 800px;">
+                            En <strong>GSI</strong>, fusionamos el desarrollo de software de alto rendimiento con
+                            procesos rigurosos de QA. No solo creamos aplicaciones; garantizamos activos digitales
+                            escalables, seguros y libres de errores.
+                        </p>
+                    </div>
+
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-lg-5 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm p-4 hover-lift text-center">
+                                <div class="mb-4">
+                                    <i class="bi bi-shield-lock display-3 text-primary d-block mb-3"></i>
+                                    <h3 class="h4 fw-bold text-dark">Aseguramiento de Calidad (QA)</h3>
+                                </div>
+
+                                <p class="text-muted fs-5 mb-4">
+                                    Garantizamos la integridad operativa de sus plataformas mediante procesos de prueba
+                                    de alto nivel. Nuestro enfoque protege la reputación digital de su empresa y asegura
+                                    una experiencia de usuario impecable en mercados globales.
+                                </p>
+
+                                <div class="mt-auto">
+                                    <a href="#contacto"
+                                        class="btn btn-outline-primary rounded-pill px-5 fw-bold transition-all">Ver
+                                        más</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-5 col-md-6">
+                            <div class="card h-100 border-0 shadow-sm p-4 hover-lift text-center">
+                                <div class="mb-4">
+                                    <i class="bi bi-terminal-plus display-3 text-primary d-block mb-3"></i>
+                                    <h3 class="h4 fw-bold text-dark">Desarrollo de Software</h3>
+                                </div>
+
+                                <p class="text-muted fs-5 mb-4">
+                                    Transformamos ideas en soluciones tecnológicas robustas y escalables. Fusionamos
+                                    arquitecturas modernas con metodologías ágiles para acelerar la transformación
+                                    digital y maximizar el retorno de inversión de su negocio.
+                                </p>
+
+                                <div class="mt-auto">
+                                    <a href="#contacto"
+                                        class="btn btn-primary rounded-pill px-5 fw-bold shadow-sm transition-all">Ver
+                                        más</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+
+
+            <!-- Contactanos -->
+            <div class="modal fade" id="modalContacto" tabindex="-1" aria-labelledby="modalContactoLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content border-0 shadow-lg">
+
+                        <div class="modal-header bg-primary text-white">
+                            <h5 class="modal-title fw-bold" id="modalContactoLabel">Inicia tu transformación con GSI
+                            </h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body p-4">
+                            <form action="https://formspree.io/f/xbdaznqg" method="POST">
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Nombre Completo</label>
+                                    <input type="text" name="name" class="form-control" placeholder="Ej. Juan Pérez"
+                                        required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Correo Corporativo</label>
+                                    <input type="email" name="email" class="form-control"
+                                        placeholder="nombre@empresa.com" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Servicio de Interés</label>
+                                    <select name="service" class="form-select">
+                                        <option value="optimizacion">Optimización de Procesos</option>
+                                        <option value="qa">Aseguramiento de Calidad (QA)</option>
+                                        <option value="iso">Consultoría ISO 9001</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">Mensaje</label>
+                                    <textarea name="message" class="form-control" rows="3"
+                                        placeholder="Cuéntanos sobre tu proyecto"></textarea>
+                                </div>
+                                <div class="d-grid mt-4">
+                                    <button type="submit" class="btn btn-primary btn-lg shadow">Enviar
+                                        Solicitud</button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="script.js"></script>
 </body>
+
 </html>
