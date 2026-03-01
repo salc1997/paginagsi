@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QA & Testing Services - GSI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Soluciones Integrales" class="logo-img">
+
+            <span class="logo-text">Grupo Soluciones Integrales</span>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Servicios <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Aseguramiento de Calidad (QA)</a></li>
+                    <li><a href="desarrollo.html">Desarrollo de Software</a></li>
+                    <li><a href="servicios.html#iso">Implementación ISO 9001</a></li>
+                    <li><a href="servicios.html#optimizacion">Optimización de Procesos</a></li>
+                </ul>
+            </li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <button type="button" class="btn btn-primary shadow-sm" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">
+                Comienza ahora
+            </button>
+        </ul>
+    </nav>
+
+    <header class="py-5 bg-dark text-white text-center"
+        style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('QA.jpeg') center/cover;">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Software Testing & <span class="text-primary">QA Estratégico</span></h1>
+            <p class="fs-5 opacity-75 mx-auto" style="max-width: 700px;">
+                Elevamos los estándares de sus productos digitales. En GSI eliminamos la incertidumbre mediante procesos
+                de verificación y validación de clase mundial.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-4">Nuestro Enfoque de Calidad Total</h2>
+                    <p class="text-muted fs-5">No solo buscamos errores; prevenimos fallos estructurales que puedan
+                        afectar su rentabilidad. Aplicamos el modelo <strong>V-Model</strong> y <strong>Agile
+                            Testing</strong> para asegurar que cada sprint sea un éxito.</p>
+
+                    <div class="mt-4">
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-shield-check text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold">Zero-Defect Policy</h5>
+                                <p class="small text-muted">Alineamos el desarrollo con los requisitos de negocio para
+                                    minimizar el re-trabajo.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3">
+                            <i class="bi bi-lightning-charge text-primary fs-3 me-3"></i>
+                            <div>
+                                <h5 class="fw-bold">Time-to-Market Acelerado</h5>
+                                <p class="small text-muted">Automatizamos lo repetitivo para que su software salga a
+                                    producción más rápido y seguro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-light p-5 rounded-4 border-start border-primary border-5">
+                        <h4 class="fw-bold mb-3">Especialidades Técnicas:</h4>
+                        <ul class="list-unstyled fs-6">
+                            <li class="mb-2"><i class="bi bi-check2-all text-primary me-2"></i> Pruebas de Regresión
+                                Automatizadas</li>
+                            <li class="mb-2"><i class="bi bi-check2-all text-primary me-2"></i> Testing de Carga y
+                                Stress (JMeter/Locust)</li>
+                            <li class="bi mb-2"><i class="bi bi-check2-all text-primary me-2"></i> Pruebas de Seguridad
+                                (OWASP Top 10)</li>
+                            <li class="bi mb-2"><i class="bi bi-check2-all text-primary me-2"></i> UX/UI Testing &
+                                Accesibilidad</li>
+                            <li class="bi mb-2"><i class="bi bi-check2-all text-primary me-2"></i> API Testing
+                                (Postman/SoapUI)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Servicios Especializados de QA</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <i class="bi bi-robot display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Test Automation</h5>
+                        <p class="small text-muted">Reducimos costos operativos creando scripts que ejecutan pruebas
+                            24/7 de forma autónoma.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <i class="bi bi-device-hdd display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Performance Testing</h5>
+                        <p class="small text-muted">Aseguramos que su sistema soporte miles de usuarios simultáneos sin
+                            degradar la velocidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 text-center">
+                        <i class="bi bi-bug-upslope display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Manual Testing</h5>
+                        <p class="small text-muted">Pruebas exploratorias profundas con enfoque humano para detectar lo
+                            que las máquinas no ven.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-primary text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">¿Listo para lanzar software sin errores?</h2>
+            <p class="mb-4">Hablemos sobre su próximo proyecto y cómo GSI puede asegurar su éxito.</p>
+            <button class="btn btn-light btn-lg rounded-pill px-5 fw-bold" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">Agendar Consultoría</button>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white-50 text-center">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 Grupo Soluciones Integrales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

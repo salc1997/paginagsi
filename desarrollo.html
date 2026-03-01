@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desarrollo de Software de Alto Rendimiento - GSI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.png" alt="Logo Soluciones Integrales" class="logo-img">
+
+            <span class="logo-text">Grupo Soluciones Integrales</span>
+        </div>
+
+        <button class="menu-toggle" onclick="toggleMenu()">
+            &#9776;
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Inicio</a></li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Servicios <i class="fas fa-chevron-down"></i></a>
+                <ul class="dropdown-content">
+                    <li><a href="qa.html">Aseguramiento de Calidad (QA)</a></li>
+                    <li><a href="#">Desarrollo de Software</a></li>
+                    <li><a href="servicios.html#iso">Implementación ISO 9001</a></li>
+                    <li><a href="servicios.html#optimizacion">Optimización de Procesos</a></li>
+                </ul>
+            </li>
+            <li><a href="#quienes-somos">Quiénes Somos</a></li>
+            <button type="button" class="btn btn-primary shadow-sm" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">
+                Comienza ahora
+            </button>
+        </ul>
+    </nav>
+
+    <header class="py-5 bg-dark text-white text-center"
+        style="background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('desarrollo.webp') center/cover;">
+        <div class="container py-5">
+            <h1 class="display-4 fw-bold mb-3">Arquitectura & <span class="text-primary">Desarrollo de Software</span>
+            </h1>
+            <p class="fs-5 opacity-75 mx-auto" style="max-width: 800px;">
+                Construimos soluciones digitales robustas que impulsan la competitividad global. En GSI, el código es
+                solo el principio; la estrategia y la escalabilidad son nuestra prioridad.
+            </p>
+        </div>
+    </header>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="p-2">
+                        <h2 class="fw-bold mb-4">Ingeniería que Escala con su Negocio</h2>
+                        <p class="text-muted fs-5 text-justify">
+                            No desarrollamos software genérico. Creamos <strong>activos tecnológicos</strong> diseñados
+                            para soportar el crecimiento de su empresa, utilizando las tecnologías más modernas y
+                            seguras del mercado actual.
+                        </p>
+                        <div class="row mt-4 g-4">
+                            <div class="col-6">
+                                <h5 class="fw-bold text-primary"><i class="bi bi-stack me-2"></i>Full-Stack</h5>
+                                <p class="small text-muted">Dominio total de Frontend y Backend con arquitecturas
+                                    limpias.</p>
+                            </div>
+                            <div class="col-6">
+                                <h5 class="fw-bold text-primary"><i class="bi bi-cloud-check me-2"></i>Cloud Native</h5>
+                                <p class="small text-muted">Soluciones listas para la nube (AWS, Azure, Google Cloud).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="p-4 bg-light rounded-4 border-bottom border-primary border-5 shadow-sm">
+                        <h4 class="fw-bold mb-3 text-dark text-center">Nuestro Stack Tecnológico</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3 mt-3">
+                            <span class="badge bg-white text-dark border p-2 px-3">Node.js</span>
+                            <span class="badge bg-white text-dark border p-2 px-3">React / Next.js</span>
+                            <span class="badge bg-white text-dark border p-2 px-3">Python / Django</span>
+                            <span class="badge bg-white text-dark border p-2 px-3">Java / Spring Boot</span>
+                            <span class="badge bg-white text-dark border p-2 px-3">PostgreSQL</span>
+                            <span class="badge bg-white text-dark border p-2 px-3">Docker & K8s</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Capacidades Especializadas</h2>
+                <p class="text-muted">Soluciones de extremo a extremo para la era digital.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 hover-lift text-center">
+                        <i class="bi bi-window-sidebar display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Aplicaciones Web Corporativas</h5>
+                        <p class="small text-muted">Sistemas internos, CRMs y plataformas B2B de alta complejidad.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 hover-lift text-center">
+                        <i class="bi bi-phone display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Desarrollo Móvil App</h5>
+                        <p class="small text-muted">Experiencias nativas e híbridas para iOS y Android con alto
+                            rendimiento.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm p-4 hover-lift text-center">
+                        <i class="bi bi-gear-wide-connected display-5 text-primary mb-3"></i>
+                        <h5 class="fw-bold">Integración de Sistemas (API)</h5>
+                        <p class="small text-muted">Conectamos sus herramientas actuales para un flujo de datos sin
+                            interrupciones.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-3">Del Concepto a la Realidad Digital</h2>
+            <p class="mb-4 fs-5 opacity-75">Transformamos procesos análogos en motores de eficiencia tecnológica.</p>
+            <button class="btn btn-primary btn-lg rounded-pill px-5 fw-bold" data-bs-toggle="modal"
+                data-bs-target="#modalContacto">Iniciar Consultoría Gratuita</button>
+        </div>
+    </section>
+
+    <footer class="py-4 bg-dark text-white-50 text-center w-100 border-top border-secondary">
+        <div class="container-fluid">
+            <p class="mb-0">&copy; 2026 Grupo Soluciones Integrales. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
